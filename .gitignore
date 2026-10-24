@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
+
+# Data (large or regenerable)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+*.sqlite
+*.db
+chroma_db/
+
+# Node (frontend)
+node_modules/
+.next/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
