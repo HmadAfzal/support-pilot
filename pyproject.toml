@@ -4,7 +4,12 @@ version = "0.1.0"
 description = "AI support agent with RAG, evals, LangGraph, and a production-style serving layer"
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "google-genai>=2.33.0",
+    "httpx>=0.28.1",
+    "openai>=3.37.0",
+    "python-dotenv>=1.2.4",
+]
 
 [build-system]
 requires = ["hatchling"]
@@ -22,6 +27,7 @@ testpaths = ["tests"]
 
 [dependency-groups]
 dev = [
+    "httpx>=0.28.1",
     "pre-commit>=4.7.0",
     "pytest>=9.1.1",
     "ruff>=0.17.2",
