@@ -1,0 +1,20 @@
+tokenizer = "BAAI/bge-small-en-v1.5"
+input = "data/processed/documents.jsonl"
+output_dir = "data/processed/chunks"
+
+[strategies.fixed_256]
+type = "fixed"
+size = 256
+overlap = 48
+
+[strategies.fixed_400]
+type = "fixed"
+size = 400
+overlap = 80
+
+[strategies.header]
+type = "header"
+max_tokens = 400
+min_tokens = 64
+overlap = 80
+max_level = 3
