@@ -1,0 +1,11 @@
+index_config = "configs/index.toml"
+
+[hybrid]
+candidates = 50
+rrf_k = 60
+
+[rerank]
+model = "cross-encoder/ms-marco-MiniLM-L-6-v2"
+candidates = 30
+batch_size = 16
+device = "cpu"
