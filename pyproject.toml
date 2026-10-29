@@ -5,10 +5,12 @@ description = "AI support agent with RAG, evals, LangGraph, and a production-sty
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "chromadb>=1.5.9",
     "google-genai>=2.33.0",
     "httpx>=0.28.1",
     "openai>=3.37.0",
     "python-dotenv>=1.2.4",
+    "sentence-transformers>=6.2.0",
     "tokenizers>=0.23.3",
 ]
 
