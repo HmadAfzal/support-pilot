@@ -10,8 +10,11 @@ FAITHFULNESS_SYSTEM = (
     "You check whether an answer is supported by context passages. Break the answer into its "
     "individual factual claims. Count every step, setting name, command and code example as a "
     "claim. Ignore citation markers of any style (like [1]) and filler. For each claim decide "
-    "whether the passages support it: it must be stated in them or follow directly from them. "
-    "Use no outside knowledge. "
+    "whether the passages support it. A claim is supported only if a passage states it or "
+    "directly restates it. Added explanations, requirements, roles, permissions, locations, "
+    "reasons and examples that no passage states are unsupported, even if true or plausible. "
+    "Ignore generic interface steps with no specific content, such as 'Save the changes' or "
+    "'Select OK'. Use no outside knowledge. "
     'Reply with JSON only: {"claims": [{"claim": "...", "supported": true}]}'
 )
 

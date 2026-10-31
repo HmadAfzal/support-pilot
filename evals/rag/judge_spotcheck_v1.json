@@ -1,0 +1,65 @@
+{
+  "stats": {
+    "n": 30,
+    "both_faithful": 13,
+    "both_unsupported": 7,
+    "judge_lenient": 5,
+    "judge_strict": 5,
+    "agreement": 0.6666666666666666,
+    "kappa": 0.30555555555555547,
+    "judge_faithful_confirmed": 0.7222222222222222,
+    "judge_flagged_confirmed": 0.5833333333333334
+  },
+  "disagreements": [
+    {
+      "id": "g0165",
+      "config": "fixed_400:dense",
+      "judge_score": 1.0
+    },
+    {
+      "id": "g0045",
+      "config": "header:dense",
+      "judge_score": 1.0
+    },
+    {
+      "id": "g0189",
+      "config": "header:hybrid_rerank",
+      "judge_score": 0.8888888888888888
+    },
+    {
+      "id": "g0158",
+      "config": "fixed_400:dense",
+      "judge_score": 1.0
+    },
+    {
+      "id": "g0185",
+      "config": "header:dense",
+      "judge_score": 1.0
+    },
+    {
+      "id": "g0037",
+      "config": "header:hybrid_rerank",
+      "judge_score": 0.0
+    },
+    {
+      "id": "g0059",
+      "config": "header:dense",
+      "judge_score": 1.0
+    },
+    {
+      "id": "g0147",
+      "config": "fixed_400:dense",
+      "judge_score": 0.8333333333333334
+    },
+    {
+      "id": "g0057",
+      "config": "header:hybrid_rerank",
+      "judge_score": 0.9090909090909091
+    },
+    {
+      "id": "g0076",
+      "config": "header:dense",
+      "judge_score": 0.7777777777777778
+    }
+  ]
+}

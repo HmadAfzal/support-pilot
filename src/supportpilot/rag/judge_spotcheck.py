@@ -107,6 +107,9 @@ def cmd_sample(args: argparse.Namespace) -> None:
             f"{SAMPLE} exists. Use --force to redraw (this drops your labels' sample)."
         )
     rows = judged_faithfulness(read_jsonl(ANSWERS), read_jsonl(JUDGE))
+    if args.exclude:
+        old = {r["id"] for r in read_jsonl(Path(args.exclude))}
+        rows = [r for r in rows if r["id"] not in old]
     sample = draw_sample(rows, args.flagged, args.perfect, args.code, args.seed)
     SAMPLE.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in sample))
     n_flag = sum(1 for r in sample if r["judge_score"] < 1.0)
@@ -201,6 +204,7 @@ def main() -> None:
     s.add_argument("--code", type=int, default=4)
     s.add_argument("--seed", type=int, default=42)
     s.add_argument("--force", action="store_true")
+    s.add_argument("--exclude", help="sample file whose questions must not be reused")
     s.set_defaults(func=cmd_sample)
     sub.add_parser("label").set_defaults(func=cmd_label)
     sub.add_parser("report").set_defaults(func=cmd_report)
