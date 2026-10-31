@@ -1,0 +1,31 @@
+documents = "data/processed/documents.jsonl"
+review_chunks = "data/processed/chunks/header.jsonl"
+draft_path = "data/golden/draft.jsonl"
+golden_path = "data/golden/golden.jsonl"
+rejected_path = "data/golden/rejected.txt"
+dev_path = "data/golden/dev.jsonl"
+test_path = "data/golden/test.jsonl"
+seed = 42
+
+[targets]
+answerable = 120
+unanswerable = 30
+
+[sampling]
+answerable_drafts = 300
+unanswerable_drafts = 45
+min_per_area = 8
+min_unanswerable_per_area = 4
+max_per_doc = 2
+min_chars = 500
+max_chars = 3000
+max_copy_run = 6
+skip_headings = ["related topics", "history", "version history", "what's next"]
+
+[llm]
+temperature = 0.3
+max_tokens = 1500
+sleep_s = 3.0
+
+[split]
+test_fraction = 0.3333
